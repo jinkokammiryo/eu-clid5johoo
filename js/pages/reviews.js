@@ -1,7 +1,7 @@
 import { getOne, addItem, updateItem, removeItem, watchAll } from "../db.js";
 import { getWho } from "./top.js";
 
-const TYPES = ["🎪 バラエティ", "🎬 映画", "📺 ドラマ", "🌸 アニメ", "🎮 ゲーム", "▶️ YouTube動画"];
+const TYPES = ["🎪 バラエティ", "🎬 映画", "📺 ドラマ", "🌸 アニメ", "🎮 ゲーム", "▶️ YouTube"];
 
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -82,7 +82,7 @@ function drawForm() {
       <div class="r-stars" id="rf-stars">
         ${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-n="${n}">☆</button>`).join("")}
       </div>
-      <textarea id="rf-comment" rows="4" maxlength="500" placeholder="感想（なくてもOK）">${esc(myComment)}</textarea>
+      <textarea id="rf-comment" rows="4" maxlength="500" placeholder="感想（なくてもいい）">${esc(myComment)}</textarea>
       <button class="btn" id="rf-save">${editingId ? "保存する" : "追加する"}</button>
       <button class="btn-sub" id="rf-cancel">やめる</button>
       <div class="error" id="rf-error"></div>
@@ -132,7 +132,7 @@ function drawForm() {
       editingId = null;
       drawForm();
     } catch (e) {
-      box.querySelector("#rf-error").textContent = "保存できませんでした。もう一度試してください";
+      box.querySelector("#rf-error").textContent = "保存できませんでした。ガビーン🤖";
     }
   };
 }
@@ -145,7 +145,7 @@ function drawList() {
 
   const box = document.getElementById("r-list");
   if (!list.length) {
-    box.innerHTML = `<div class="coming">まだ何もありません</div>`;
+    box.innerHTML = `<div class="coming">まだ何もNOTHING</div>`;
     return;
   }
   box.innerHTML = list
