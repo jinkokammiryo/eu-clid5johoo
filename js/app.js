@@ -3,6 +3,7 @@ import { login, logout, watchAuth, loginErrorMessage } from "./auth.js";
 import { renderTop } from "./pages/top.js";
 import { renderReviews } from "./pages/reviews.js";
 import { renderBoard } from "./pages/board.js";
+import { renderDatelog } from "./pages/datelog.js";
 
 const loginScreen = document.getElementById("login-screen");
 const appScreen = document.getElementById("app");
@@ -44,7 +45,8 @@ const renderers = {
   top: renderTop,
   wishes: renderWishes,
   reviews: renderReviews,
-  board: renderBoard
+  board: renderBoard,
+  datelog: renderDatelog
 };
 
 function showPage(name) {
