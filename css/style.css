@@ -337,3 +337,23 @@ select:focus {
   color: var(--white);
   background: var(--pink);
 }
+
+/* やりたいことリスト */
+.w-tabs { display: flex; gap: 6px; margin: 12px 0 8px; }
+.w-tabs button { flex: 1; padding: 10px 4px; border: 2px solid var(--pink); border-radius: 999px; background: #fff; color: var(--pink-deep); font-weight: bold; font-family: inherit; }
+.w-tabs button.on { background: var(--pink); color: #fff; }
+.w-label { display: block; font-size: 13px; color: var(--text-sub); margin: 8px 0 4px; }
+.w-bar { height: 12px; background: var(--pink-pale); border-radius: 999px; overflow: hidden; margin-top: 8px; }
+.w-bar div { height: 100%; background: var(--pink); border-radius: 999px; }
+.w-row { display: flex; gap: 10px; align-items: flex-start; }
+.w-check { border: none; background: none; font-size: 28px; padding: 0; line-height: 1; }
+.w-main { flex: 1; min-width: 0; }
+.w-title { font-weight: bold; word-break: break-all; }
+.is-done .w-title { text-decoration: line-through; color: var(--text-sub); }
+.w-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.w-badge { font-size: 12px; background: var(--pink-soft); color: var(--pink-deep); padding: 2px 8px; border-radius: 999px; }
+.w-overdue { background: #ffd6d6; color: #d33; }
+.w-thumb { width: 100%; max-height: 220px; object-fit: cover; border-radius: 12px; margin-top: 10px; }
+.w-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.w-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: flex; align-items: center; justify-content: center; z-index: 999; }
+.w-overlay img { max-width: 100%; max-height: 100%; }
