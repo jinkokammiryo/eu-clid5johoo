@@ -574,3 +574,322 @@ select:focus {
   display: block;
   font-size: 22px;
 }
+
+/* ===== 旅行・デートログ (#page-datelog と .dl-～) ===== */
+#page-datelog .dl-sub {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: var(--pink-deep);
+}
+#page-datelog .dl-sub2 {
+  margin-top: 18px;
+}
+#page-datelog .dl-count {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+#page-datelog .dl-count-world {
+  margin: 12px 0 0;
+}
+#page-datelog .dl-bar {
+  height: 12px;
+  background: var(--pink-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+#page-datelog .dl-bar-in {
+  height: 100%;
+  width: 0;
+  background: var(--pink-deep);
+  border-radius: 999px;
+  transition: width 0.4s;
+}
+#page-datelog .dl-mapcard {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#page-datelog .dl-mapcard .dl-sub,
+#page-datelog .dl-mapcard .dl-hint {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#page-datelog .dl-map {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 2px;
+}
+#page-datelog .dl-tile {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 28px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--pink-soft);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-sub);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#page-datelog .dl-t3 {
+  font-size: 9px;
+  letter-spacing: -0.5px;
+}
+#page-datelog .dl-has::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px var(--pink-deep);
+}
+#page-datelog .dl-hint {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+#page-datelog .dl-world {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+#page-datelog .dl-wtile {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  min-height: 66px;
+  padding: 6px 4px;
+  border: 1px solid var(--pink-soft);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text-sub);
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#page-datelog .dl-flag {
+  font-size: 22px;
+  line-height: 1.2;
+}
+#page-datelog .dl-wname {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-all;
+  text-align: center;
+}
+#page-datelog .dl-addrow {
+  display: flex;
+  gap: 8px;
+}
+#page-datelog .dl-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+}
+#page-datelog .dl-addbtn {
+  box-sizing: border-box;
+  width: auto;
+  flex-shrink: 0;
+  min-height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+}
+
+/* 詳細シート（画面の下から出てくる部分） */
+.dl-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+.dl-sheet {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  font-family: inherit;
+}
+.dl-sheet-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: var(--pink-deep);
+}
+.dl-label {
+  margin: 16px 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+.dl-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dl-chip {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--pink-soft);
+  font-size: 18px;
+  font-weight: 700;
+  color: #5a2a40;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.dl-chip.on {
+  box-shadow: 0 0 0 3px var(--pink-deep);
+}
+.dl-chip-none {
+  width: auto;
+  padding: 0 14px;
+  border-radius: 22px;
+  background: #fff;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+.dl-memo {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  resize: none;
+}
+.dl-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.dl-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-sub);
+}
+.dl-ph {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 80px;
+}
+.dl-ph img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--pink-pale);
+}
+.dl-ph-del {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 18px;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.dl-addphoto {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.dl-close {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.dl-delplace {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.dl-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.88);
+}
+.dl-zoom img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
