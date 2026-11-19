@@ -556,3 +556,21 @@ select:focus {
   font-family: inherit;
   text-align: center;
 }
+
+/* ===== 下のナビ：6個を横いっぱいに均等に並べる ===== */
+.nav {
+  display: flex;
+  overflow-x: visible;
+}
+.nav .nav-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.nav .nav-btn span {
+  display: block;
+  font-size: 22px;
+}
