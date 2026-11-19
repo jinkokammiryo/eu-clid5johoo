@@ -2,6 +2,8 @@ import { renderWishes } from "./pages/wishes.js";
 import { login, logout, watchAuth, loginErrorMessage } from "./auth.js";
 import { renderTop } from "./pages/top.js";
 import { renderReviews } from "./pages/reviews.js";
+import { renderBoard } from "./pages/board.js";
+
 const loginScreen = document.getElementById("login-screen");
 const appScreen = document.getElementById("app");
 const passwordInput = document.getElementById("login-password");
@@ -38,7 +40,12 @@ logoutButton.addEventListener("click", function () {
 });
 
 // ---------- ページ切り替え ----------
-const renderers = { top: renderTop, wishes: renderWishes, reviews: renderReviews };
+const renderers = {
+  top: renderTop,
+  wishes: renderWishes,
+  reviews: renderReviews,
+  board: renderBoard
+};
 
 function showPage(name) {
   document.querySelectorAll(".page").forEach(function (el) {
