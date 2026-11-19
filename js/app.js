@@ -1,3 +1,4 @@
+import { renderWishes } from "./pages/wishes.js";
 import { login, logout, watchAuth, loginErrorMessage } from "./auth.js";
 import { renderTop } from "./pages/top.js";
 
@@ -37,9 +38,7 @@ logoutButton.addEventListener("click", function () {
 });
 
 // ---------- ページ切り替え ----------
-const renderers = {
-  top: renderTop
-};
+const renderers = { top: renderTop, wishes: renderWishes };
 
 function showPage(name) {
   document.querySelectorAll(".page").forEach(function (el) {
