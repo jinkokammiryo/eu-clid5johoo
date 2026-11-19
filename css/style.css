@@ -338,22 +338,79 @@ select:focus {
   background: var(--pink);
 }
 
-/* やりたいことリスト */
-.w-tabs { display: flex; gap: 6px; margin: 12px 0 8px; }
-.w-tabs button { flex: 1; padding: 10px 4px; border: 2px solid var(--pink); border-radius: 999px; background: #fff; color: var(--pink-deep); font-weight: bold; font-family: inherit; }
-.w-tabs button.on { background: var(--pink); color: #fff; }
-.w-label { display: block; font-size: 13px; color: var(--text-sub); margin: 8px 0 4px; }
-.w-bar { height: 12px; background: var(--pink-pale); border-radius: 999px; overflow: hidden; margin-top: 8px; }
-.w-bar div { height: 100%; background: var(--pink); border-radius: 999px; }
-.w-row { display: flex; gap: 10px; align-items: flex-start; }
-.w-check { border: none; background: none; font-size: 28px; padding: 0; line-height: 1; }
-.w-main { flex: 1; min-width: 0; }
-.w-title { font-weight: bold; word-break: break-all; }
-.is-done .w-title { text-decoration: line-through; color: var(--text-sub); }
-.w-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.w-badge { font-size: 12px; background: var(--pink-soft); color: var(--pink-deep); padding: 2px 8px; border-radius: 999px; }
-.w-overdue { background: #ffd6d6; color: #d33; }
-.w-thumb { width: 100%; max-height: 220px; object-fit: cover; border-radius: 12px; margin-top: 10px; }
-.w-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.w-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: flex; align-items: center; justify-content: center; z-index: 999; }
-.w-overlay img { max-width: 100%; max-height: 100%; }
+/* ===== やりたいことリスト ===== */
+#page-wishes *,
+#page-wishes *::before,
+#page-wishes *::after {
+  box-sizing: border-box;
+}
+
+/* 入力欄・セレクト・日付：全部おなじ大きさ */
+#page-wishes input[type="text"],
+#page-wishes input[type="date"],
+#page-wishes input:not([type]),
+#page-wishes select {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+  background-color: #fff;
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#page-wishes select {
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23ff6fa5' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+#page-wishes input[type="date"] {
+  min-width: 0;
+  text-align: left;
+}
+#page-wishes input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.4em;
+}
+.w-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 8px 0 4px;
+}
+
+/* ボタン */
+#page-wishes #w-add {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+#page-wishes #w-form .btn,
+#page-wishes #w-form .btn-sub {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: inherit;
+}
+#page-wishes #w-form .btn-sub {
+  min-height: 46px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+/* これから／達成ずみ／ぜんぶ */
+#page-wishes .w-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 14px 0 12px;
+}
+#page-wish
