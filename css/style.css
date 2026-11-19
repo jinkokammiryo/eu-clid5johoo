@@ -414,3 +414,145 @@ select:focus {
   margin: 14px 0 12px;
 }
 #page-wish
+
+/* ===== 作品レビュー帳 ===== */
+#page-reviews *,
+#page-reviews *::before,
+#page-reviews *::after {
+  box-sizing: border-box;
+}
+#page-reviews input[type="text"],
+#page-reviews input:not([type]),
+#page-reviews select,
+#page-reviews textarea {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+  background-color: #fff;
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#page-reviews textarea {
+  resize: vertical;
+}
+#page-reviews select {
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23ff6fa5' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+#page-reviews #r-add {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+#page-reviews #r-form .btn,
+#page-reviews #r-form .btn-sub {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: inherit;
+}
+#page-reviews #r-form .btn-sub {
+  min-height: 46px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+.r-label {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 4px 0;
+}
+.r-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.r-stars button {
+  flex: 1;
+  min-height: 48px;
+  padding: 0;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--pink);
+  background: #fff;
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.r-stars button.on {
+  background: var(--pink-soft);
+}
+.r-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.r-title {
+  font-weight: bold;
+  font-size: 17px;
+  word-break: break-all;
+}
+.r-avg {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--pink-deep);
+  background: var(--pink-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.r-badge {
+  display: inline-block;
+  margin: 6px 0 4px;
+  font-size: 12px;
+  background: var(--pink-soft);
+  color: var(--pink-deep);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.r-side {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: var(--pink-pale);
+  border-radius: 12px;
+}
+.r-name {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.r-score {
+  color: var(--pink-deep);
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.r-comment {
+  margin-top: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 14px;
+}
+.r-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+#page-reviews .r-actions .btn-sub {
+  flex: 1 1 auto;
+  min-height: 42px;
+  font-family: inherit;
+  text-align: center;
+}
