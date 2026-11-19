@@ -106,7 +106,7 @@ function draw(box, conf) {
     }
   } else {
     counterHtml =
-      '<div class="card counter"><div class="counter-label">下の「設定」で付き合った日を入れてクレメンス💕</div></div>';
+      '<div class="card counter"><div class="counter-label">⚙️設定で付き合った日を入れてクレメンス💕</div></div>';
   }
 
   const who = getWho();
