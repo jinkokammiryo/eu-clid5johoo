@@ -32,5 +32,5 @@ export function loginErrorMessage(err) {
   if (code === "auth/network-request-failed") {
     return "電波激悪です";
   }
-  return "ログイン失敗丸";
+  return "ログインできません";
 }
