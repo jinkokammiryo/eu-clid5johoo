@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ふたりのアプリ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ログイン画面 -->
+  <div id="login-screen" class="login">
+    <div class="login-card">
+      <div class="login-heart">🌸</div>
+      <h1>ふたりだけの場所</h1>
+      <p class="login-sub">合言葉（パスワード）を入れてな</p>
+      <input id="login-password" type="password" placeholder="パスワード" autocomplete="current-password">
+      <button id="login-button" class="btn">入る</button>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- アプリ本体（ログイン後に表示） -->
+  <div id="app" class="app hidden">
+    <header class="header">
+      <span class="header-title">🌸 ふたりのアプリ</span>
+      <button id="logout-button" class="header-logout">ログアウト</button>
+    </header>
+
+    <main class="main">
+      <section id="page-top" class="page">
+        <div id="top-content"></div>
+      </section>
+
+      <section id="page-wishes" class="page hidden">
+        <h2 class="page-title">✨ やりたいことリスト</h2>
+        <p class="coming">準備中やで（Step 2）</p>
+      </section>
+
+      <section id="page-reviews" class="page hidden">
+        <h2 class="page-title">🎬 レビュー帳</h2>
+        <p class="coming">準備中やで（Step 2）</p>
+      </section>
+
+      <section id="page-roulette" class="page hidden">
+        <h2 class="page-title">🎯 今日何やるルーレット</h2>
+        <p class="coming">準備中やで（Step 3）</p>
+      </section>
+
+      <section id="page-board" class="page hidden">
+        <h2 class="page-title">💬 ふたりの掲示板</h2>
+        <p class="coming">準備中やで（Step 3）</p>
+      </section>
+
+      <section id="page-capsule" class="page hidden">
+        <h2 class="page-title">💌 タイムカプセル</h2>
+        <p class="coming">準備中やで（Step 4）</p>
+      </section>
+
+      <section id="page-datelog" class="page hidden">
+        <h2 class="page-title">🗺️ 旅行・デートログ</h2>
+        <p class="coming">準備中やで（Step 4）</p>
+      </section>
+
+      <section id="page-secrets" class="page hidden">
+        <h2 class="page-title">🔑 秘密の合言葉</h2>
+        <p class="coming">準備中やで（Step 5）</p>
+      </section>
+    </main>
+
+    <nav class="nav" id="nav">
+      <button class="nav-btn active" data-page="top"><span>🏠</span>ホーム</button>
+      <button class="nav-btn" data-page="wishes"><span>✨</span>やりたい</button>
+      <button class="nav-btn" data-page="reviews"><span>🎬</span>レビュー</button>
+      <button class="nav-btn" data-page="roulette"><span>🎯</span>ルーレット</button>
+      <button class="nav-btn" data-page="board"><span>💬</span>掲示板</button>
+      <button class="nav-btn" data-page="capsule"><span>💌</span>カプセル</button>
+      <button class="nav-btn" data-page="datelog"><span>🗺️</span>旅行</button>
+      <button class="nav-btn" data-page="secrets"><span>🔑</span>合言葉</button>
+    </nav>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
